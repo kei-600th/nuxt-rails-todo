@@ -8,6 +8,7 @@
 <script>
   import AddTodo from "@/components/AddTodo";
   import TodoList from "@/components/TodoList";
+  import axios from "@/plugins/axios";  // 追加
 
   export default {
     components: {
@@ -20,14 +21,14 @@
       };
     },
     methods: {
-      addTodo(title) {
+      async addTodo(title) { // asyncを追加
+        await axios.post("/v1/todos", { title }); // この行を追加
         this.todos.push({
           title
         });
       },
     },
   };
-
 </script>
 
 <style>
