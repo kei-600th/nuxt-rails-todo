@@ -3,6 +3,7 @@
 
 
     <div>
+      <Success />
       <Loading />
     </div>
 
@@ -96,6 +97,7 @@
 
 <script>
 
+import Success from "@/components/Success"; 
 import Loading from "@/components/Loading"; 
 
 
@@ -112,7 +114,8 @@ import Loading from "@/components/Loading";
       }
     },
     components: {
-      Loading
+      Loading,
+      Success
     },
     computed: {
       user() {
