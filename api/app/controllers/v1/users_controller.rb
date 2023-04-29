@@ -5,8 +5,8 @@ class V1::UsersController < ApplicationController
           User.find_by(uid: params[:uid])
           else 
               User.all
-          end
-          render json: users
+        end
+        render json: users
       end
   
       def create
