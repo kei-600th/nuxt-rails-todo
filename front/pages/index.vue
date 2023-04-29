@@ -26,9 +26,6 @@
         return this.$store.state.auth.currentUser;
       }
     },
-    created() {
-      console.log("API_KEY:", process.env.API_KEY);
-    },
     methods: {
       async addTodo(todo) { // asyncを追加
         const { data } = await axios.post("/v1/todos", { todo });
