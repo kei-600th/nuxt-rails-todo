@@ -1,4 +1,4 @@
-class UserSerializer < ActiveModel::Serializer
+class TodoSerializer < ActiveModel::Serializer
   # ここから記述
     attributes :id, :title, :user_id, :username
     belongs_to :user
